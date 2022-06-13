@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/animator">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Miringkan HP Anda"
+        android:textColor="#F08080"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_square"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/tvHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="#EF5350"
+        android:gravity="center"
+        android:text="Hello"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <EditText
+        android:id="@+id/editFileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Isikan nama file"
+        android:inputType="textPersonName"
+        android:minHeight="40dp"
+        android:textColor="#fff"
+        android:textColorHint="#ffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_square" />
+
+    <EditText
+        android:id="@+id/editTeksCatatan"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:layout_below="@+id/tv_square"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Isikan catatan di sini"
+        android:inputType="textLongMessage|textMultiLine"
+        android:lines="5"
+        android:textAlignment="viewStart"
+        android:textColor="#fff"
+        android:textColorHint="#ffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFileName" />
+
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="serif"
+        android:text="TEMP"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tempp" />
+
+
+    <TextView
+        android:id="@+id/weather"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="serif"
+        android:text="CUACA"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/temp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:text=" SAVE "
+        android:backgroundTint="#7CFC00"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Read"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:text="READ"
+        android:backgroundTint="#DDA0DD"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/log"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:text="DELETE"
+        android:backgroundTint="#FF6347"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/share"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical"
+        android:text="LOG"
+        android:backgroundTint="#EEE8AA"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:text="Share"
+        android:backgroundTint="#9ACD32"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/log"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+    <Button
+        android:id="@+id/cuaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cuaca"
+        android:backgroundTint="#ADD8E6"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/log"
+        app:layout_constraintEnd_toStartOf="@+id/Delete"
+        app:layout_constraintStart_toEndOf="@+id/save" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/weather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/weather" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
